@@ -94,6 +94,7 @@ const Contact = () => {
                   value={formData.eventDate}
                   onChange={handleChange}
                   required
+                  min={new Date() .toISOString().split("T")[0]}
                   className="bg-black/50 border border-gray-700 p-3 rounded-lg focus:border-gold outline-none transition text-white"
                 />
               </div>
