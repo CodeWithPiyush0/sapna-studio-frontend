@@ -1,15 +1,35 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import Contact from './components/Contact';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+
+const Home = () => (
+  <>
+    <Navbar />
+    <Hero />
+    <Contact />
+  </>
+);
 
 function App() {
 
   return (
-    <>
+    <Router>
       <Toaster position='top-center' reverseOrder={false} />
-      <Contact />
-      <h1 className='text-3xl font-bold underline text-gold'>Piyush</h1>
-    </>
+
+      <Routes>
+
+        <Route path='/' element={<Home />} />
+
+        <Route path='/admin' element={<Login />} />
+        <Route path='/admin/dashboard' element={<Dashboard />} />
+
+      </Routes>
+    </Router>
   )
 }
 
