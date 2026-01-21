@@ -46,6 +46,16 @@ const Dashboard = () => {
             Manage your inquiries and portfolio.
           </p>
         </div>
+
+        <div className="flex gap-3">
+          <button
+            onClick={() => navigate('/admin/gallery')}
+            className="bg-gold text-black px-6 py-2 rounded-lg font-bold hover:bg-yellow-500 transition"
+          >
+            Manage Gallery
+          </button>
+        </div>
+
         <button
           onClick={handleLogout}
           className="flex items-center gap-2 w-full md:w-auto bg-red-600/20 text-red-500 border border-red-600/50 px-6 py-2 rounded-lg hover:bg-red-600 hover:text-white transition text-sm font-bold"
