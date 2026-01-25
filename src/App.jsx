@@ -7,12 +7,14 @@ import Contact from './components/Contact';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import AdminGallery from './pages/AdminGallery';
+import Gallery from './components/Gallery';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const Home = () => (
   <>
     <Navbar />
     <Hero />
+    <Gallery />
     <Contact />
   </>
 );
